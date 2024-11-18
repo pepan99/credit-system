@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "credit-system",
   "private": true,
   "scripts": {
     "build": "turbo build",
