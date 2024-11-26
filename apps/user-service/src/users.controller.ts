@@ -2,6 +2,7 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { CreateUserRequest } from './users.model';
 import { UserRepository } from './users.repository';
+import { MessagePattern } from '@nestjs/microservices';
 
 @Controller('/api/users')
 export class UsersController {
@@ -14,6 +15,7 @@ export class UsersController {
   }
 
   @Get()
+  @MessagePattern({ cmd: 'getUsers' })
   async getUsers() {
     return this.userRepository.findAll();
   }
