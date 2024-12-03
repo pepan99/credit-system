@@ -1,14 +1,16 @@
 import { Module } from '@nestjs/common';
 import { CqrsModule } from '@nestjs/cqrs';
-import { CreateUserHandler } from './use-cases/users/users.handler';
+import {
+  CreateUserHandler,
+  UserCreatedEventHandler,
+} from './use-cases/users/users.handler';
 import { UsersController } from './application/controllers/users.controller';
 import { UsersService } from './use-cases/users/users.service';
 import { UserRepository } from './infractructure/data/users-repository/users.repository';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 
 export const commandHandlers = [CreateUserHandler];
-
-export const eventHandlers = [];
+export const eventHandlers = [UserCreatedEventHandler];
 
 @Module({
   imports: [
