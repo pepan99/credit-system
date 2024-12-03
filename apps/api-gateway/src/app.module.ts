@@ -7,11 +7,14 @@ import { AppService } from './app.service';
   imports: [
     ClientsModule.register([
       {
-        name: 'USERS',
-        transport: Transport.TCP,
+        name: 'USERS_SERVICE',
+        transport: Transport.RMQ,
         options: {
-          host: '127.0.0.1',
-          port: 3002,
+          urls: ['amqp://guest:guest@localhost:5672'],
+          queue: 'users',
+          queueOptions: {
+            durable: true,
+          },
         },
       },
     ]),

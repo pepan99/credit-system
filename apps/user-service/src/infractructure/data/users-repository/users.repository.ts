@@ -1,7 +1,7 @@
-import { User } from './users.entity';
+import { User } from 'src/core/entities/users.entity';
 
 export class UserRepository {
-  private users: User[] = [];
+  private users: User[] = [new User('john@gmail.com', '123456')];
 
   async create(email: string, password: string): Promise<User> {
     const newUser = new User(email, password);

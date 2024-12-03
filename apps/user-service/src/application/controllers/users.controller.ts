@@ -1,8 +1,8 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
-import { UsersService } from './users.service';
-import { CreateUserRequest } from './users.model';
-import { UserRepository } from './users.repository';
 import { MessagePattern } from '@nestjs/microservices';
+import { UserRepository } from 'src/infractructure/data/users-repository/users.repository';
+import { CreateUserRequest } from 'src/use-cases/users/users.model';
+import { UsersService } from 'src/use-cases/users/users.service';
 
 @Controller('/api/users')
 export class UsersController {

@@ -4,7 +4,9 @@ import { CreateUserDto } from './dtos/users.dto';
 
 @Injectable()
 export class AppService {
-  constructor(@Inject('USERS') private readonly userService: ClientProxy) { }
+  constructor(
+    @Inject('USERS_SERVICE') private readonly userService: ClientProxy,
+  ) { }
 
   async getTasksForUser(id: string) {
     const pattern = { cmd: 'getTasksForUser' };

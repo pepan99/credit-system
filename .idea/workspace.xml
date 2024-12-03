@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a675b9a3-8540-46d0-938c-4a52f5501393" name="Changes" comment="feat: init soa structure">
+    <list default="true" id="a675b9a3-8540-46d0-938c-4a52f5501393" name="Changes" comment="fix: package script inconsistency">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/api-gateway/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api-gateway/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/api-gateway/src/app.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api-gateway/src/app.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/task-service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/task-service/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/user-service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user-service/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/user-service/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user-service/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +23,7 @@
         <entry key="$PROJECT_DIR$" value="n-tier" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/apps/user-service" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="OptimizeOnSaveOptions">
@@ -41,25 +37,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/josefkrusina/school/credit-system&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/josefkrusina/school/credit-system/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/josefkrusina/school/credit-system/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "cqrs-rabbitmq",
+    "last_opened_file_path": "/Users/josefkrusina/school/credit-system",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/josefkrusina/school/credit-system/node_modules/prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/josefkrusina/school/credit-system/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps/task-service/src/tasks" />
@@ -85,7 +81,12 @@
       <workItem from="1732030402806" duration="16000" />
       <workItem from="1732030476017" duration="385000" />
       <workItem from="1732030873497" duration="9000" />
-      <workItem from="1732030895060" duration="352000" />
+      <workItem from="1732030895060" duration="5248000" />
+      <workItem from="1732049086942" duration="93000" />
+      <workItem from="1732049184369" duration="41000" />
+      <workItem from="1732636963792" duration="374000" />
+      <workItem from="1732709627182" duration="19000" />
+      <workItem from="1733171237472" duration="8488000" />
     </task>
     <task id="LOCAL-00001" summary="feat: init soa structure">
       <option name="closed" value="true" />
@@ -103,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731972479671</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix: package script inconsistency">
+      <option name="closed" value="true" />
+      <created>1732031319175</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732031319175</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +120,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: init soa structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: init soa structure" />
+    <MESSAGE value="fix: package script inconsistency" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: package script inconsistency" />
   </component>
 </project>

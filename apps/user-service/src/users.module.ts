@@ -1,16 +1,32 @@
 import { Module } from '@nestjs/common';
-import { UsersController } from './users.controller';
-import { UsersService } from './users.service';
-import { UserRepository } from './users.repository';
-import { CreateUserHandler } from './users.handler';
 import { CqrsModule } from '@nestjs/cqrs';
+import { CreateUserHandler } from './use-cases/users/users.handler';
+import { UsersController } from './application/controllers/users.controller';
+import { UsersService } from './use-cases/users/users.service';
+import { UserRepository } from './infractructure/data/users-repository/users.repository';
+import { ClientsModule, Transport } from '@nestjs/microservices';
 
 export const commandHandlers = [CreateUserHandler];
 
 export const eventHandlers = [];
 
 @Module({
-  imports: [CqrsModule],
+  imports: [
+    CqrsModule,
+    ClientsModule.register([
+      {
+        name: 'RABBITMQ_SERVICE',
+        transport: Transport.RMQ,
+        options: {
+          urls: ['amqp://user:pwd@localhost:5672'],
+          queue: 'users-queue',
+          queueOptions: {
+            durable: true,
+          },
+        },
+      },
+    ]),
+  ],
   controllers: [UsersController],
   providers: [
     UsersService,
@@ -19,4 +35,4 @@ export const eventHandlers = [];
     ...eventHandlers,
   ],
 })
-export class UsersModule {}
+export class UsersModule { }
